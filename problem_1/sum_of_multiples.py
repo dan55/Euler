@@ -15,9 +15,15 @@ def brute_force(n, *args):
             yield i
 
 
-if __name__ == "__main__":
+def main():
+    args = [3, 5]
+
     # the test case
-    assert sum(brute_force(10, 3, 5)) == 23
+    assert sum(brute_force(10, *args)) == 23
 
     # the problem
-    print(sum(brute_force(1000, 3, 5)))
+    print(sum(brute_force(1000, *args)))
+
+
+if __name__ == "__main__":
+    main()
